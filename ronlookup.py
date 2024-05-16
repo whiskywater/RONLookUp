@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-
 def main():
     print("Terminal Interface for Username Enumeration")
     url = input("Enter the login URL (e.g., http://funbox.fritz.box/wp-login.php): ")
@@ -25,7 +24,6 @@ def main():
     else:
         print("No available usernames found.")
 
-
 def test_username(url, username):
     payload = {
         'log': username,  # This assumes the form field for username is named 'log'
@@ -45,7 +43,6 @@ def test_username(url, username):
         print(f"An error occurred: {e}")
 
     return False
-
 
 if __name__ == "__main__":
     main()
